@@ -1,12 +1,8 @@
-# WARNING - DOWNLOAD ZIP INSTEAD OF CLONING!
-### If you clone, it will list me as a contributor and retain all the old commits, and you don't want that. Download Zip instead then change folder name.
+# Pig Latin
 
-=========
-# insertApplicationName
+#### User enters phrase, app converts to Pig Latin, March 22, 2016_
 
-#### briefDescription, dateOfCurrentVersion_
-
-#### By _**insertContributorNumberOne, insertContributorNumberTwo **_
+#### By _**Ronando**_
 
 ## Description
 
