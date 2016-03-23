@@ -1,19 +1,23 @@
 // Business Logic
 var vowelCheck = function(userInput) {
   var vowels = 'aeiou';
-  var word = userInput;  // string
+  var phrase = userInput.split(' ');  // array ['an apple']
+  var addAy = 'ay';
+  var newPhrase = ''
 
-  if (vowels.indexOf(word[0]) > -1) {  // string.indexOf(searchvalue,start)
-    // if letter is equal to vowel
-    return true;  // 1st letter is a vowel, then true 'hello'
-  } else {
-    return false;  // 1st letter is a vowel, then false 'ant'
+  for (var i = 0; i < phrase.length; i++) { // ['ant, 'man']
+    if (vowels.indexOf(phrase[i][0]) > -1) {  // string.indexOf(searchvalue,start)
+      newPhrase += phrase[i] + addAy;
+    } else {
+      newPhrase += phrase[i];
+    }
+    alert(newPhrase);
+    return newPhrase;
   }
-
 
 }
 
-
+// Not done, can't get fucker to print up 2 words with appended 'ay'
 
 
 
@@ -25,15 +29,12 @@ $(function() {
     event.preventDefault();
 
     $('#results').empty();
-    var addAy = 'ay';
     var userInput = $('.sentence').val();  // get value as string
     var result = vowelCheck(userInput);  // plug string value in vowelCheck function
 
-    if (result === true) {
-      $('#results').append('<h4>' + userInput + addAy + '</h4>');  // if 1st is vowel, add ay to end
-    } else {
-      $('#results').append('<h4>' + userInput + '</h4>');
-    }
+
+      $('#results').append('<h4>' + userInput + '</h4>');  // if 1st is vowel, add ay to end
+
 
   });
 
