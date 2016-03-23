@@ -24,15 +24,16 @@ $(function() {
   $('form').submit(function(event) {
     event.preventDefault();
 
-  var addAy = 'ay';
-  var userInput = $('.sentence').val();  // get value as string
-  var result = vowelCheck(userInput);  // plug string value in vowelCheck function
+    $('#results').empty();
+    var addAy = 'ay';
+    var userInput = $('.sentence').val();  // get value as string
+    var result = vowelCheck(userInput);  // plug string value in vowelCheck function
 
-  if (result === true) {
-    $('#results').append(userInput + addAy);  // if 1st is vowel, add ay to end
-  } else {
-    $('#results').append(userInput);  
-  }
+    if (result === true) {
+      $('#results').append('<h4>' + userInput + addAy + '</h4>');  // if 1st is vowel, add ay to end
+    } else {
+      $('#results').append('<h4>' + userInput + '</h4>');
+    }
 
   });
 
